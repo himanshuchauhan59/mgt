@@ -1,28 +1,34 @@
-import React from 'react';
+import React from 'react'; 
 import ReactDOM from 'react-dom/client';
 import './index.css';
+
+import Navbar from './Component/Navbar';
 import Main  from './App';
 import reportWebVitals from './reportWebVitals';
+import Form from './Component/Contact';
 
+const detail = {
+  name: "himanshu",
+  Coments : 'Coments',
+  author:{
+    name: "hello",
+    Navbarname: "auth",
+  }
+};  
 const root = ReactDOM.createRoot(document.getElementById('mainSection'));
-root.render(
-  <React.StrictMode>
-    <Main/>
-  </React.StrictMode>
-);
-const time = ReactDOM.createRoot(document.getElementById('Time'));
-function Time()
-{ 
-  const Element = (
-      <p>{new Date().toLocaleTimeString()}.</p>
+  root.render(
+    <React.StrictMode>
+      <Main/>
+    </React.StrictMode>
   );
-  time.render(
-    Element  
-    );
-  
-}
-  setInterval(Time , 1000)
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+const nav = ReactDOM.createRoot(document.getElementById('navbar'));
+  function tick()
+  {
+    nav.render(<Navbar name={detail.name} Coments={detail.Coments} author={detail.author} date={new Date()}/>);
+  }
+  setInterval(tick , 1000);
+const Router = ReactDOM.createRoot(document.getElementById('context'));
+Router.render(
+    
+);
 reportWebVitals();

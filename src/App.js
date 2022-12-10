@@ -1,23 +1,27 @@
-import Navbar from './Component/Navbar';
 import './App.css';
-var name = <div>hello himanshu</div>;
-const detail = {
-  name: "himanshu",
-  Navbarname : "Mgt",
-  author:{
-    name: "hello",
-    Navbarname: "auth"
-  }
-};
-
- function Main() {
+import { useState } from 'react';
+import Form from './Component/Contact';
+import Home from './Component/Home';
+import About from './Component/About';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom';
+function Main() {
   return (
+
     <div className="container-fluid my-2">
-      <Navbar name={detail.name} Navbarname={detail.Navbarname} author={detail.author} />
       <div className='container'>
-        <h1>{name}</h1>
+        <Routes>
+          <Route path="/" element={<Home />}> </Route>
+          <Route exact path='/Form' element={<Form />}></Route>
+          <Route exact path='/About' element={<About />}></Route>
+        </Routes>
       </div>
     </div>
+
   );
 }
 

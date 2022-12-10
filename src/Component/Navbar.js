@@ -31,7 +31,7 @@ export default function Navbar(props) {
                                     <li className="nav-item">
                                         <Link to="/About" className="nav-link ">About</Link>
                                     </li>
-                                    
+
                                 </ul>
 
                                 <span className="navbar-text text-light">
@@ -40,7 +40,11 @@ export default function Navbar(props) {
                             </div>
                         </div>
                     </nav>
-                    
+                    <Routes>
+                        <Route path="/" element={<Home />}> </Route>
+                        <Route exact path='/Form' element={<Form />}></Route>
+                        <Route exact path='/About' element={<About />}></Route>
+                    </Routes>
                 </div>
             </Router>
         </>

@@ -14,11 +14,7 @@ function Main() {
 
     <div className="container-fluid my-2">
       <div className='container'>
-        <Routes>
-          <Route path="/" element={<Home />}> </Route>
-          <Route exact path='/Form' element={<Form />}></Route>
-          <Route exact path='/About' element={<About />}></Route>
-        </Routes>
+        
       </div>
     </div>
 

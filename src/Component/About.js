@@ -1,10 +1,11 @@
 import React from "react";
 
-export default function About()
-{
-    return(
+export default function About() {
+    return (
         <>
-            <h1>this is About page</h1>
-        </>
-    );
+            <div className="container">
+                <h1>this is About page</h1>
+            </div>
+            </>
+            );
 }

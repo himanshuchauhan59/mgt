@@ -8,12 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import Form from './Component/Contact';
 
 const detail = {
-  name: "himanshu",
-  Coments : 'Coments',
-  author:{
-    name: "hello",
-    Navbarname: "auth",
-  }
+  name: "MGT",
 };  
 const root = ReactDOM.createRoot(document.getElementById('mainSection'));
   root.render(
@@ -27,8 +22,5 @@ const nav = ReactDOM.createRoot(document.getElementById('navbar'));
     nav.render(<Navbar name={detail.name} Coments={detail.Coments} author={detail.author} date={new Date()}/>);
   }
   setInterval(tick , 1000);
-const Router = ReactDOM.createRoot(document.getElementById('context'));
-Router.render(
-    
-);
+
 reportWebVitals();
